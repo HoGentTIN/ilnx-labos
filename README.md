@@ -41,6 +41,6 @@ Uitgebreide voorbeelden en motivatie van cheat sheets kan je vinden in deze Gith
 
 ## Vragen/opmerkingen
 
-Mocht je fouten of onduidelijkheden vinden in de oefeningen, of je hebt voorstellen of ideeën voor verbeteringen, aarzel niet om een [Issue](https://github.com/HoGentTIN/ilnx-labos/issues) te openen.
+Mocht je eventueel fouten of onduidelijkheden vinden in de oefeningen, of je hebt voorstellen of ideeën voor verbeteringen, aarzel niet om een [Issue](https://github.com/HoGentTIN/ilnx-labos/issues) te openen.
 
 
