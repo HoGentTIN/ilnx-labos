@@ -68,7 +68,7 @@ Geef in de volgende oefeningen telkens het commando dat nodig is om de taak uit 
 
 ## Geavanceerde permissies
 
-1. Zoek alle bestanden in het systeem waar de SUID-permissie op ingesteld staat. Schrijf het resultaat in een bestand met de naam `suidBestanden` in het homedirectory van de `root`. Schrijf de fouten weg naar een `foutenBestand`. Doe dit in één commandolijn. (Tip: gebruik het commando `find` en zoek in de manpages naar de geschikte opties).
+1. Zoek alle bestanden in het systeem waar de SUID-permissie op ingesteld staat. Schrijf het resultaat in een bestand met de naam `suidBestanden. Schrijf de fouten weg naar een `foutenBestand`. Doe dit in één commandolijn. (Tip: gebruik het commando `find` en zoek in de manpages naar de geschikte opties).
 
     ```
     $ COMMANDO
@@ -98,7 +98,7 @@ Geef in de volgende oefeningen telkens het commando dat nodig is om de taak uit 
     UITVOER
     ```
 
-2. Verander nu de permissies van het bestand `hosts` in directory `oefenenMetPermissies` als volgt: SGID aan, `xr` voor *others*, `wr` voor *group* en geen permissies voor de eigenaar. Geef het gebruikte commando en ook het commando om te controleren of de permissies juist ingesteld zijn.
+2. Verander nu de permissies van het bestand `hosts` in directory `oefenenMetPermissies` als volgt: SGID aan, `rx` voor *others*, `rw` voor *group* en geen permissies voor de eigenaar (merk op dat deze combinatie van permissies geen praktisch nut heeft!). Geef het gebruikte commando en ook het commando om te controleren of de permissies juist ingesteld zijn.
 
     ```
     $ COMMANDO
