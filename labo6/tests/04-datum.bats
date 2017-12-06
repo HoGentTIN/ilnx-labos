@@ -43,7 +43,7 @@ teardown() {
 
 @test "Controleer uitvoer" {
   output=$(mktemp)
-  day=$(date)
+  day=$(date | sed -e 's/  / /g')
 
   # Schrijf uitvoer weg naar tijdelijk bestand
   bash "${script}" > "${output}"
