@@ -85,7 +85,7 @@ De unit tests van de oefeningen worden in volgorde uitgevoerd. Zolang er nog fou
         - N = het aantal woorden in de wachtwoordzin (standaardwaarde = 4)
         - WORDS = het bestand dat de te gebruiken woordenlijst bevat (standaardwaarde = `/usr/share/dict/words`)
     - Sluit af met een passende foutboodschap (op stderr!) en exit-status als:
-        - er twee of meer parameters gegeven werden
+        - er meer dan twee parameters gegeven werden
         - WORDS niet bestaat of niet leesbaar is
     - Tip: met het commando `shuf` kan je de volgorde van lijnen tekst door elkaar schudden.
 11. Schrijf een script om een backup te maken van de gegeven directory, meer bepaald een Tar-archief gecomprimeerd met bzip2.
