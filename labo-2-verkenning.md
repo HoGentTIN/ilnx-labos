@@ -225,7 +225,7 @@ Behoud deze directorystructuur voor de volgende oefeningen over bestanden.
 3. Tik volgend commando in, leg uit wat er hier precies gebeurt, wat het effect is.
 
     ```
-    $ echo hello world > file2"
+    $ echo hello world > file2
     ```
 
     **Antwoord:** 
@@ -382,8 +382,8 @@ Maak in de directory `linux/` twee tekstbestanden aan, met naam `tekst1a` en `te
     UITVOER
     ```
 
-2. Maak een *harde link* van `tekst1a` naar `tekst1b`
-3. Maak een *symbolische link* van `tekst2a` naar `tekst2b`
+2. Maak een *harde link* aan met naam `tekst1b` die verwijst naar bestand `tekst1a`
+3. Maak een *symbolische link* aan met naam `tekst2b` die verwijst naar bestand `tekst2a`
 4. Voor het volgende commando uit en geef de uitvoer:
 
     ```
