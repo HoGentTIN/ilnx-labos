@@ -57,7 +57,7 @@ script="elf-params.sh"
 }
 
 @test "./${script} een .. vijftien => ‘een\r...\relf’ (meer dan 11 argumenten)" {
-  result="$(bash ${script} een twee drie vier vijf zes zeven acht negen tien elf twaalf dertien veertien vijftien | xxd -cols 256 -plain)"
+  result="$(bash ${script} een twee drie vier vijf zes zeven acht negen tien elf twaalf dertien veertien vijftien | xxd -c 256 -plain)"
   echo -e "result was: ${result}"
   [ "${result}" = '65656e0a747765650a647269650a766965720a76696a660a7a65730a7a6576656e0a616368740a6e6567656e0a7469656e0a656c660a' ]
 }
