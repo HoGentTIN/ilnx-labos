@@ -4,37 +4,6 @@ Als je gebruik maakt van andere bronnen (bv. blog-artikel of HOWTO die je op het
 
 Maak ter voorbereiding zeker de oefeningen in Linux Fundamentals (Paul Cobbaut) over dit onderwerp (pp. 97, 174 en 181).
 
-## Variabelen
-
-Geef zoals gewoonlijk het commando om de opgegeven taak uit te voeren en controleer ook het resultaat.
-
-1. Druk met behulp van de juiste systeemvariabele de gebruikte bash-versie af op het scherm. Geef het gebruikte commando weer.
-2. Je bent ingelogd als gewone gebruiker.
-    1. Maak een variabele `pinguin` aan en geef deze de waarde Tux.
-    2. Hoe kan je de inhoud opvragen van deze variabele en afdrukken op het scherm?
-    3. Open nu een sub(bash)shell in je huidige bashomgeving.
-    4. Hoe kan je controleren dat er nu twee bashshells actief zijn en dat de ene een subshell is van de andere?
-    5. Probeer nu in deze nieuwe subshell de inhoud van de variabele PINGUIN af te drukken op het scherm. Lukt dit?
-    6. De verklaring hiervoor ligt in het type variabele. Welke soort variabele is PINGUIN en hoe kan je dit controleren? Keer hiervoor terug naar je oorspronkelijke bashshell
-    7. Zorg er nu voor dat de inhoud van PINGUIN ook in elke nieuwe subshell kan gelezen worden? Hoe doe je dit? Schrijf het gebruikte commando neer.
-    8. Open opnieuw een sub(bash)shell in je huidige bashomgeving en controleer of je nu de inhoud van PINGUIN kan lezen. Welk soort variabele is PINGUIN nu? Doe dan ook de controle.
-3. Zoek de inhoud op van volgende shellvariabelen en vul volgende tabel aan:
-
-    | Variabele  | Waarde |
-    | :---       | :---   |
-    | `PATH`     |        |
-    | `HISTSIZE` |        |
-    | `UID`      |        |
-    | `HOME`     |        |
-    | `HOSTNAME` |        |
-    | `LANG`     |        |
-    | `USER`     |        |
-    | `OSTYPE`   |        |
-    | `PWD`      |        |
-    | `MANPATH`  |        |
-
-## Scripts
-
 Voor sommige van de opgaven zijn er unit tests voorzien die je een aanwijzing geven of je op de goede weg zit. De bedoeling is dat je de gevraagde scripts in de subdirectory `labo6` opslaat. Als je je in directory `labo6` bevindt, kan je de tests uitvoeren met:
 
 ```
@@ -61,7 +30,7 @@ Indien nodig wordt bij het voor de eerste keer uitvoeren van het testscript het 
 
 De unit tests van de oefeningen worden in volgorde uitgevoerd. Zolang er nog fouten in een oefening gevonden zijn, worden de tests van de volgende nog niet uitgevoerd.
 
-1. Maak een script met de naam `onderelkaar.sh` die de op de command line als argumenten ingevoerde zin woord per woord onder elkaar afdrukt op het scherm. Controleer op het einde van het script aan de hand van de exitstatus of het script gelukt is of niet en laat dit afdrukken op het scherm bij het uitvoeren van het script. Voorbeeld van de uitvoer:
+1. Maak een script met de naam `onderelkaar.sh` die de op de command line als argumenten ingevoerde zin woord per woord onder elkaar afdrukt op het scherm. Als de gebruiker geen argumenten opgegeven heeft, wordt er een gepaste foutboodschap op stderr afgedrukt en stopt het script met een foutcode (exit-status verschillend van 0). Voorbeeld van de uitvoer:
 
     ```
     $ ./onderelkaar.sh dit is een test
@@ -69,6 +38,12 @@ De unit tests van de oefeningen worden in volgorde uitgevoerd. Zolang er nog fou
     is
     een
     test
+    $ echo $?
+    0
+    $ ./onderelkaar.sh
+    Geen argumenten opgegeven!
+    $ echo $?
+    1
     ```
 
 2. Schrijf een script `gebruikerslijst.sh` dat een gesorteerde lijst van users (uit `/etc/passwd`) weergeeft op het scherm. Maak gebruik van het het commando `cut`.
