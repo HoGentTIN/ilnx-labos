@@ -5,6 +5,229 @@ Als je gebruik maakt van andere bronnen (bv. blog-artikel of HOWTO die je op het
 Maak ter voorbereiding zeker de oefeningen in Linux Fundamentals (Paul Cobbaut) over dit onderwerp (pp. 222 en 228).
 
 
+## Gebruikers en groepen aanmaken
+
+Het doel van deze opgave is om de opdrachten en de begrippen met betrekking tot  gebruikers en groepen te bestuderen, binnen de context van Linux als een multi-user-systeem.
+
+Tussen de vragen is ruimte voorzien om je antwoorden in te vullen. Het gaat telkens om zgn. codeblokken in Markdown, die starten en eindigen met drie backquotes. Binnen elk codeblok geef je telkens het commando dat je hebt ingetikt en de uitvoer die je krijgt.
+
+1. Je hebt al een gebruiker aangemaakt voor jezelf. Log in als deze gebruiker. Geef hieronder telkens het commando en de uitvoer
+    - Wat is het commando om de huidige directory op te vragen? Welke uitvoer toont het commando?
+
+        ```
+        $ COMMANDO
+        UITVOER
+        ```
+
+    - Wat is het UID van deze gebruiker?
+
+        ```
+        $ COMMANDO
+        UITVOER
+        ```
+
+    - Wat is het GID van deze gebruiker?
+
+        ```
+        $ COMMANDO
+        UITVOER
+        ```
+
+2. Log in als de `root`-gebruiker met het commando `su -` (let op de spatie!)
+    - Wat is de home-directory van `root`?
+
+        ```
+        $ COMMANDO
+        UITVOER
+        ```
+
+    - Wat is het UID van deze gebruiker?
+
+        ```
+        $ COMMANDO
+        UITVOER
+        ```
+
+    - Wat is het GID van deze gebruiker?
+
+        ```
+        $ COMMANDO
+        UITVOER
+        ```
+
+3. Maak een nieuwe gebruiker aan met de naam `alice`, zonder specifieke opties
+    - Geef het gebruikte commando:
+
+        ```
+        $ COMMANDO
+        UITVOER
+        ```
+
+    - Voorzie een geschikt wachtwoord voor deze gebruiker (en vergeet het niet! Noteer het eventueel hier in je verslag of in de beschrijving van je VM)
+
+        ```
+        $ COMMANDO
+        UITVOER
+        ```
+
+4. Configuratiebestanden voor gebruikersbeheer:
+    - In welk bestand kan je de UID, gebruikersnaam, homedirectory, enz. van alle gebruikers terugvinden?
+
+        ```
+        /PAD/NAAR/BESTAND
+        ```
+
+    - In welk configuratiebestand kan je al de bestaande gebruikersgroepen nakijken, en ook de gebruikers die lid zijn van elke groep?
+
+        ```
+        /PAD/NAAR/BESTAND
+        ```
+
+    - In welk configuratiebestand vind je de *wachtwoorden* van alle gebruikers?
+
+        ```
+        /PAD/NAAR/BESTAND
+        ```
+
+5. Gebruikersgroepen aanmaken
+    - Maak een groep aan met de naam `sporten`
+
+        ```
+        $ COMMANDO
+        UITVOER
+        ```
+
+    - In welk configuratiebestand vind je het GID van deze groep terug?
+
+        ```
+        $ COMMANDO
+        UITVOER
+        ```
+
+    - Wat zal het GID zijn van de groepen `zwemmen` en `judo` als je deze nu onmiddellijk zou aanmaken? Maak ze aan en controleer!
+
+        ```
+        $ COMMANDO
+        UITVOER
+        ```
+
+    - Voeg de gebruiker `alice` toe aan de groepen `sporten` en `zwemmen`
+
+        ```
+        $ COMMANDO
+        UITVOER
+        ```
+
+    - Log in als `alice` door in een terminal het commando `su - alice` (let op de spaties!) uit te voeren
+
+        ```
+        $ COMMANDO
+        UITVOER
+        ```
+
+    - Zorg er nu voor dat de groep `sporten` de primaire groep wordt van `alice`.
+
+        ```
+        $ COMMANDO
+        UITVOER
+        ```
+
+    - Zorg er voor dat `alice` uitgelogd is, ga terug naar `root`
+
+        ```
+        $ COMMANDO
+        UITVOER
+        ```
+
+6. Maak nu de gebruikers in onderstaande tabel aan. Zorg er voor dat ze al meteen bij aanmaken tot de aangegeven groepen behoren. Kies zelf geschikte wachtwoorden voor deze gebruikers en vergeet ze niet (vul eventueel een kolom toe aan de tabel).
+
+    | Gebruikersnaam | Primaire groep | Secundaire groep |
+    | :---           | :---           | :---             |
+    | `bob`          | `sporten`      | `judo`           |
+    | `carol`        | `sporten`      | `zwemmen`        |
+    | `daniel`       | `sporten`      | `judo`           |
+    | `eva`          | `sporten`      | `zwemmen`        |
+
+    - Geef de gebruikte commando's om de gebruikers aan te maken en ook om te verifiëren of dit correct gebeurd is:
+
+        ```
+        $ COMMANDO
+        UITVOER
+        $ COMMANDO
+        UITVOER
+        ...
+        ```
+
+    - Verwijder nu de *groep* `alice` en controleer.
+
+        ```
+        $ COMMANDO
+        UITVOER
+        ```
+
+    - Gebruiker `daniel` gaat een tijdje niet meer sporten. Zorg er voor dat deze gebruiker tot nader order geen toegang meer kan hebben tot het systeem (zonder het wachtwoord of de gebruiker te verwijderen!).
+
+        ```
+        $ COMMANDO
+        UITVOER
+        ```
+
+    - Hoe kan je controleren dat `daniel` inderdaad geen toegang meer heeft tot het systeem? In welk bestand kan dat en hoe zie je daar dan dat het account afgesloten is?
+
+        ```
+        $ COMMANDO
+        UITVOER
+        ```
+
+    - Gebruiker `daniel` komt terug naar de sportclub. Geef hem opnieuw toegang tot het systeem.
+
+        ```
+        $ COMMANDO
+        UITVOER
+        ```
+
+    - Gebruiker `eva` stopt helemaal met sporten. Verwijder deze gebruiker, maar doe dit zorgvuldig: zorg er in het bijzonder voor dat ook haar homedirectory verwijderd wordt.
+
+        ```
+        $ COMMANDO
+        UITVOER
+        ```
+
+7. Log aan als de gebruiker `carol`
+
+    ```
+    $ COMMANDO
+    UITVOER
+    ```
+
+    - Controleer of je in de “thuismap” bent van deze gebruiker. Maak onder deze map een bestand `test` aan door middel van het commando `touch`.
+
+        ```
+        $ COMMANDO
+        UITVOER
+        ```
+
+    - Probeer nu als gebruiker `carol` je te verplaatsen naar de “thuismap” van `alice`.
+
+        ```
+        $ COMMANDO
+        UITVOER
+        ```
+
+    - Kan je de inhoud van de mappen binnen de thuismap van `alice` bekijken?
+
+        ```
+        $ COMMANDO
+        UITVOER
+        ```
+
+    - Probeer nu als `carol` onder de “thuismap” van `alice` ook een bestand `test` te maken. Lukt dit? Kan je dit verklaren?
+
+        ```
+        $ COMMANDO
+        UITVOER
+        ```
+
 ## Algemene permissies
 
 Geef in de volgende oefeningen telkens het commando dat nodig is om de taak uit te voeren en ook het resultaat.
