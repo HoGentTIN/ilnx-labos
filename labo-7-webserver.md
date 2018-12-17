@@ -1,4 +1,4 @@
-# Labo 4: Webserver/LAMP stack
+# Labo 7: Webserver/LAMP stack
 
 In dit labo zullen we een webserver opzetten in de VM die je in het vorige labo gemaakt hebt.
 Een van de populairste toepassingen van Linux als server is de zgn. LAMP-stack. Deze afkorting staat voor Linux + Apache + MySQL + PHP. De combinatie vormt een platform voor het ontwikkelen van webapplicaties waar vele bekende websites gebruik van maken (bv. Facebook).
