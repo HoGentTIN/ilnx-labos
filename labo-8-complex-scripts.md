@@ -9,7 +9,7 @@ Maak ter voorbereiding zeker de oefeningen in Linux Fundamentals (Paul Cobbaut) 
 
 Voor sommige van de opgaven zijn er unit tests voorzien die je een aanwijzing geven of je op de goede weg zit. De bedoeling is dat je de gevraagde scripts in de subdirectory `labo6` opslaat. Als je je in directory `labo6` bevindt, kan je de tests uitvoeren met:
 
-```
+```console
 $ tests/runtests.sh
 Installing ShellCheck. Please enter your sudo password!
 [sudo] password for user: 
@@ -46,7 +46,7 @@ De unit tests van de oefeningen worden in volgorde uitgevoerd. Zolang er nog fou
     - Het archief krijgt als naam DIRECTORY-TIMESTAMP.tar.bzip2 met:
         - DIRECTORY = de naam van de directory waarvan je een backup maakt
         - TIMESTAMP = de huidige datum/tijd in het formaat JJJJMMDDUUMM
-        - vb. “student-201312021825.tar.bzip2” voor directory /home/student
+        - vb. “student-201312021825.tar.bz2” voor directory /home/student
     - Er wordt in dezelfde directory als het archief een log weggeschreven naar een bestand backup-TIMESTAMP.log van de uitvoer (zowel stdout als stderr) van het tar-commando.
     - Gebruik: `backup.sh [OPTIES] [DIR]`
     - Opties en argumenten:
