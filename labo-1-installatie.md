@@ -4,11 +4,12 @@
 
 1. Download en installeer de laatste versie van VirtualBox. Als je werkt op een van de klaspc's (campus Gent), dan is VirtualBox al geïnstalleerd.
 2. Maak een nieuwe virtuele machine aan om straks Linux in te installeren. Let er op dat je volgende instellingen voorziet:
-    - Als je op een klaspc werkt is de naam van je VM je eigen naam, bv. PietPieters
+    - Kies een naam voor je VM
     - Het type van de VM is “Linux”, de versie “Fedora (64 bit)”
-    - RAM: minstens 1024MB
-    - Virtuele harde schijf van ~20GB, dynamisch
+    - RAM: aanbevolen minstens 2048MB
+    - Virtuele harde schijf van minstens 60GB, dynamisch (mag ook meer)
     - Videogeheugen: zoveel mogelijk (128MB)
+    - Graphics Controller: VBoxSVGA
     - 3D acceleration aanzetten
     - Maak twee virtuele netwerkadapters aan, één van het type NAT (= standaardkeuze), en één van het type "Host only"
 
